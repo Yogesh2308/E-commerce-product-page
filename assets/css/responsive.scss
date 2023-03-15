@@ -1,0 +1,101 @@
+@import "variables";
+@media all and (min-width: 768px) {
+  .header {
+    padding: 20px;
+    .container {
+      .menu-open {
+        gap: 20px;
+        .menu {
+          display: none;
+        }
+        .navigation {
+          display: block;
+          .nav {
+            position: static;
+            transform: translateY(0%);
+            flex-direction: row;
+            display: flex;
+          }
+          li {
+            list-style: none;
+            margin: 10px;
+            
+            a {
+              text-decoration: none;
+              font-size: 15px;
+              padding: 8px;
+              &:hover {
+                color: $Orange;
+                transition: 0.3s ease 300ms;
+               }
+            }
+          }
+        }
+      }
+      .cart {
+        gap: 30px;
+      }
+    }
+  }
+  .banner {
+    .container {
+      display: flex;
+      padding: 20px;
+      align-items: center;
+      justify-content: space-around;
+      .box {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        max-width: 40%;
+        .main-thumbnail {
+          display: block;
+          max-width: 100%;
+          border-radius: 10px;
+        }
+        .mobile-thumb {
+          display: none;
+        }
+        .preview {
+          display: flex;
+          justify-content: space-between;
+          img {
+            border-radius: 10px;
+            width: 20%;
+            cursor: pointer;
+          }
+          .selected {
+            outline: 3px solid $Orange;
+            opacity: 0.65;
+          }
+        }
+      }
+      .buttons {
+        display: flex;
+        gap: 20px;
+        .amount-btn {
+          width: 40%;
+        }
+        .add-btn {
+          width: 60%;
+        }
+      }
+      .banner-area {
+        .banner-text {
+          max-width: 440px;
+          h1 {
+            @include margin-b(25px);
+            font-size: 35px;
+          }
+          p {
+            font-size: 13px;
+            line-height: 1.7;
+            font-weight: 500;
+            @include margin-b(20px);
+          }
+        }
+      }
+    }
+  }
+}
+
